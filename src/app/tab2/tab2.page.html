@@ -13,5 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="stacked">Nota</ion-label>
+    <ion-input type="number" [(ngModel)]="nota"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Frequência</ion-label>
+    <ion-input type="number" [(ngModel)]="frequencia" (ionBlur)="setSituacao()"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label id="descricao" position="stacked">{{descricao}}</ion-label>
+  </ion-item>
 </ion-content>

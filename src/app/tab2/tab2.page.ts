@@ -7,6 +7,25 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  nota: number
+  frequencia: number
+  descricao: string
+
   constructor() {}
 
+  setSituacao() {
+    this.descricao = this.getDescricaoSituacao()
+  }
+
+  getDescricaoSituacao(): string {
+    let descricaoSituacao: string = ''
+    if (this.frequencia < 75 || this.nota < 4) {
+      descricaoSituacao = 'REPROVADO'
+    } else if (this.nota < 6) {
+      descricaoSituacao = 'RECUPERAÇÃO'
+    } else {
+      descricaoSituacao = 'APROVADO'
+    }
+    return descricaoSituacao;
+  }
 }
