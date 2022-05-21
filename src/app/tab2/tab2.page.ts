@@ -7,24 +7,24 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  nota: number
-  frequencia: number
-  descricao: string
+  nota: number;
+  frequencia: number;
+  descricao: string;
 
   constructor() {}
 
   setSituacao() {
-    this.descricao = this.getDescricaoSituacao()
+    this.descricao = this.getDescricaoSituacao();
   }
 
   getDescricaoSituacao(): string {
-    let descricaoSituacao: string = ''
+    let descricaoSituacao = '';
     if (this.frequencia < 75 || this.nota < 4) {
-      descricaoSituacao = 'REPROVADO'
+      descricaoSituacao = 'REPROVADO';
     } else if (this.nota < 6) {
-      descricaoSituacao = 'RECUPERAÇÃO'
+      descricaoSituacao = 'RECUPERAÇÃO';
     } else {
-      descricaoSituacao = 'APROVADO'
+      descricaoSituacao = 'APROVADO';
     }
     return descricaoSituacao;
   }
