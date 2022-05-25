@@ -1,8 +1,8 @@
 export class Cliente {
   nome: string = '';
-  tipo: number = 1;
-  genero: number = 1;
-  dataNascimento: Date = null;
+  tipo: number;
+  genero: number;
+  dataNascimento: Date;
   observacao: string = '';
   inativo: boolean = false;
 }

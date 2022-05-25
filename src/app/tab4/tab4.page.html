@@ -31,7 +31,7 @@
 
     <ion-item>
       <ion-label position="stacked">Data de nascimento</ion-label>
-      <ion-input type="date" id="dataNascimento" formControlName="dataNascimento"></ion-input>
+      <ion-input type="date" formControlName="dataNascimento" required></ion-input>
     </ion-item>
   
     <ion-item>
@@ -44,7 +44,7 @@
       <ion-label>Inativo</ion-label>
     </ion-item>
 
-    <ion-button type="submit" color="primary">Salvar</ion-button>
+    <ion-button type="submit" color="primary" [disabled]="formCliente.invalid">Salvar</ion-button>
     <ion-button href="#" color="secondary">Cancelar</ion-button>
   </form>
 </ion-content>

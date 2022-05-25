@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Cliente } from '../clientes/shared/cliente';
 
 @Component({
@@ -18,10 +18,10 @@ export class Tab4Page {
 
   createForm(cliente: Cliente) {
     this.formCliente = this.formBuilder.group({
-      nome: [cliente.nome],
-      tipo: [cliente.tipo],
-      genero: [cliente.genero],
-      dataNascimento: [cliente.dataNascimento],
+      nome: [cliente.nome, Validators.required],
+      tipo: [cliente.tipo, Validators.required],
+      genero: [cliente.genero, Validators.required],
+      dataNascimento: [cliente.dataNascimento, Validators.required],
       observacao: [cliente.observacao],
       inativo: [cliente.inativo]
     })
@@ -29,6 +29,7 @@ export class Tab4Page {
 
   onSubmit() {
     console.log(this.formCliente.value);
+    console.log(this.formCliente);
     this.formCliente.reset(new Cliente());
   }
 }
