@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 4
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
+
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input id="nome" formControlName="nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Tipo</ion-label>
+      <ion-select placeholder="Selecione um:" id="tipo" formControlName="tipo">
+        <ion-select-option value="1">Pessoa física</ion-select-option>
+        <ion-select-option value="2">Pessoa jurídica</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-radio-group allow-empty-selection value="1">
+      <ion-list-header>
+        <ion-label>Gênero</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio slot="end" color="primary" value="1"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Feminino</ion-label>
+        <ion-radio slot="end" color="secondary" value="2"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-item>
+      <ion-label position="stacked">Data de nascimento</ion-label>
+      <ion-input type="date" id="dataNascimento" formControlName="dataNascimento"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Observação</ion-label>
+      <ion-textarea rows="3" id="observacao" formControlName="observacao"></ion-textarea>
+    </ion-item>
+  
+    <ion-item>
+      <input type="checkbox" name="inativo" id="inativo" formControlName="inativo">
+      <label for="inativo">Inativo</label>
+    </ion-item>
+  
+    <ion-button type="submit" class="primary">Salvar</ion-button>
+    <!-- <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a> -->
+  </form>
+</ion-content>
