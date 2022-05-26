@@ -8,41 +8,43 @@
 <ion-content [fullscreen]="true">
   <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
 
-    <ion-item>
-      <ion-label position="stacked">Nome</ion-label>
-      <ion-input formControlName="nome"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Tipo</ion-label>
-      <ion-select placeholder="Selecione um Tipo:" formControlName="tipo">
-        <ion-select-option value="1">Pessoa física</ion-select-option>
-        <ion-select-option value="2">Pessoa jurídica</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Gênero</ion-label>
-      <ion-select placeholder="Selecione um Gênero:" formControlName="genero">
-        <ion-select-option value="1">Masculino</ion-select-option>
-        <ion-select-option value="2">Feminino</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Data de nascimento</ion-label>
-      <ion-input type="date" formControlName="dataNascimento" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Observação</ion-label>
-      <ion-textarea rows="3" formControlName="observacao"></ion-textarea>
-    </ion-item>
-
-    <ion-item>
-      <ion-checkbox slot="start" formControlName="inativo"></ion-checkbox>
-      <ion-label>Inativo</ion-label>
-    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input formControlName="nome"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Tipo</ion-label>
+        <ion-select placeholder="Selecione um Tipo:" formControlName="tipo">
+          <ion-select-option value="1">Pessoa física</ion-select-option>
+          <ion-select-option value="2">Pessoa jurídica</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Gênero</ion-label>
+        <ion-select placeholder="Selecione um Gênero:" formControlName="genero">
+          <ion-select-option value="1">Masculino</ion-select-option>
+          <ion-select-option value="2">Feminino</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Data de nascimento</ion-label>
+        <ion-input type="date" formControlName="dataNascimento" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Observação</ion-label>
+        <ion-textarea rows="3" formControlName="observacao"></ion-textarea>
+      </ion-item>
+  
+      <ion-item>
+        <ion-checkbox slot="start" formControlName="inativo"></ion-checkbox>
+        <ion-label>Inativo</ion-label>
+      </ion-item>
+    </ion-list>
 
     <ion-button type="submit" color="primary" [disabled]="formCliente.invalid">Salvar</ion-button>
     <ion-button href="#" color="secondary">Cancelar</ion-button>

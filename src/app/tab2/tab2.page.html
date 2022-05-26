@@ -13,16 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-item>
-    <ion-label position="stacked">Nota</ion-label>
-    <ion-input type="number" [(ngModel)]="nota"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Frequência</ion-label>
-    <ion-input type="number" [(ngModel)]="frequencia" (ionBlur)="setSituacao()"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="stacked">{{descricao}}</ion-label>
-  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Nota</ion-label>
+      <ion-input type="number" [(ngModel)]="nota"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Frequência</ion-label>
+      <ion-input type="number" [(ngModel)]="frequencia" (ionBlur)="setSituacao()"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">{{descricao}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
