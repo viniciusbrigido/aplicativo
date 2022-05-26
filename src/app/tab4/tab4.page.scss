@@ -1,0 +1,17 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  max-height: 150px;
+  max-width: 60%;
+  flex-wrap: wrap;
+  .field {
+    margin-top: 10px;
+    margin-right: 10px;
+    min-width: 165px;
+    display: flex;
+    flex-direction: column;
+    .field-title {
+      font-weight: bolder;
+    }
+  }
+}

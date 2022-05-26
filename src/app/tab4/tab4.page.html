@@ -47,4 +47,15 @@
     <ion-button type="submit" color="primary" [disabled]="formCliente.invalid">Salvar</ion-button>
     <ion-button href="#" color="secondary">Cancelar</ion-button>
   </form>
+
+  <div class="fields">
+    <span class="field">
+      <span class="field-title">Clientes</span>
+      <ul>
+        <li *ngFor="let cliente of clientes">
+          {{cliente.codigo}} - {{cliente.nome}}
+        </li>
+      </ul>
+    </span>
+  </div>
 </ion-content>

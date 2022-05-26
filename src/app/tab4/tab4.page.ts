@@ -9,26 +9,23 @@ import { Cliente } from '../dto/cliente';
 })
 export class Tab4Page implements OnInit {
   formCliente: FormGroup;
+  clientes: Cliente[] = [];
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.createForm(new Cliente());
-  }
-
-  createForm(cliente: Cliente) {
     this.formCliente = this.formBuilder.group({
-      nome: [cliente.nome, Validators.required],
-      tipo: [cliente.tipo, Validators.required],
-      genero: [cliente.genero, Validators.required],
-      dataNascimento: [cliente.dataNascimento, Validators.required],
-      observacao: [cliente.observacao],
-      inativo: [cliente.inativo]
+      nome: [null, Validators.required],
+      tipo: [null, Validators.required],
+      genero: [null, Validators.required],
+      dataNascimento: [null, Validators.required],
+      observacao: [null],
+      inativo: [null]
     });
   }
 
   onSubmit() {
     console.log(this.formCliente.value);
-    this.formCliente.reset(new Cliente());
+    this.formCliente.reset();
   }
 }
