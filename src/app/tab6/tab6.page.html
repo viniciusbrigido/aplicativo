@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tab 6</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input readonly>{{display}}</ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('1')" class="btn-padrao" color="medium">1</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('2')" class="btn-padrao" color="medium">2</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('3')" class="btn-padrao" color="medium">3</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('4')" class="btn-padrao" color="medium">4</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('5')" class="btn-padrao" color="medium">5</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('6')" class="btn-padrao" color="medium">6</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('7')" class="btn-padrao" color="medium">7</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('8')" class="btn-padrao" color="medium">8</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('9')" class="btn-padrao" color="medium">9</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="adicionaNumero('0')" class="btn-padrao" color="medium">0</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="adicionaOperacao('+')" class="btn-padrao">+</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaOperacao('-')" class="btn-padrao">-</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaOperacao('*')" class="btn-padrao">*</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="adicionaOperacao('/')" class="btn-padrao">/</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="calculaResultado()" class="btn-padrao">=</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
