@@ -29,7 +29,7 @@ export class Tab6Page {
   }
 
   adicionaOperacao(operacao: string) {
-    if (this.resultado === null) {
+    if (this.display === '') {
       this.exibirToast('A equação não pode começar com uma operação.');
       return;
     }
