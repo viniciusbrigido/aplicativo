@@ -29,8 +29,13 @@ export class Tab6Page {
   }
 
   adicionaOperacao(operacao: string) {
-    if (this.display === '') {
-      this.exibirToast('A equação não pode começar com uma operação.');
+    if (this.numero1 === '') {
+      if (operacao === CalculadoraService.subtracao) {
+        this.numero1 += operacao;
+        this.display = this.numero1;
+      } else {
+        this.exibirToast('A equação não pode começar com uma operação.');
+      }
       return;
     }
     if (this.operacao === '') {
