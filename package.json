@@ -20,7 +20,10 @@
     "@angular/platform-browser-dynamic": "~13.2.2",
     "@angular/router": "~13.2.2",
     "@capacitor/core": "3.5.1",
+    "@capacitor/google-maps": "^1.0.0",
+    "@ionic-native/geolocation": "^5.36.0",
     "@ionic/angular": "^6.0.0",
+    "@ionic/cordova-builders": "^6.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
