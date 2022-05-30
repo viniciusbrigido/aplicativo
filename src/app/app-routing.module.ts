@@ -4,8 +4,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
+  {
     path: 'tab4',
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   },
@@ -18,8 +19,8 @@ const routes: Routes = [
     loadChildren: () => import('./tab6/tab6.module').then( m => m.Tab6PageModule)
   },
   {
-    path: 'tab7',
-    loadChildren: () => import('./tab7/tab7.module').then( m => m.Tab7PageModule)
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   }
 
 ];
