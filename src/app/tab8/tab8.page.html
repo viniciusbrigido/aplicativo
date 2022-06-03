@@ -1,14 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Tab 7</ion-title>
+    <ion-title>Tab 8</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label position="floating">Advinhe o número</ion-label>
-      <ion-input type="number" [(ngModel)]="numeroAdvinhacao"></ion-input>
+      <ion-textarea autoGrow="true" [disabled]="true" >{{palavras}}</ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Advinhe a palavra</ion-label>
+      <ion-input [(ngModel)]="palavraAdvinhacao"></ion-input>
     </ion-item>
 
     <ion-button expand="block" [disabled]="desabilita" (click)="tentarAdvinhar()">TENTAR ADVINHAR</ion-button>
@@ -23,5 +27,4 @@
 
     <ion-button expand="block" (click)="reiniciarPartida()">REINICIAR PARTIDA</ion-button>
   </ion-list>
-
 </ion-content>
